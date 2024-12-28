@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://bxrr026v2lqiy"]
 
 [ext_resource type="Texture2D" uid="uid://dgda7ifsvpfxk" path="res://assets/BigSpritev7.png" id="1_2j0xl"]
-[ext_resource type="PackedScene" uid="uid://cbwlh28prtook" path="res://scenes/player.tscn" id="2_7x2m4"]
+[ext_resource type="PackedScene" uid="uid://dj15xwwo0m3e8" path="res://scenes/player.tscn" id="2_7x2m4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbsha"]
 texture = ExtResource("1_2j0xl")
@@ -2610,3 +2610,4 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAaAB8AAAAAAAEAAAAaAB8AAAAAAAIAAAAaAB8
 tile_set = SubResource("TileSet_bdar4")
 
 [node name="Player" parent="." instance=ExtResource("2_7x2m4")]
+position = Vector2(165, 158)
