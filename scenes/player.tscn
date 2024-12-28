@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj15xwwo0m3e8"]
+[gd_scene load_steps=9 format=3 uid="uid://dj15xwwo0m3e8"]
 
 [ext_resource type="Texture2D" uid="uid://dgda7ifsvpfxk" path="res://assets/BigSpritev7.png" id="1_4brmk"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_e6v1f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spxb5"]
 radius = 5.0
@@ -43,6 +44,8 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_e6v1f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_spxb5")
@@ -52,4 +55,6 @@ position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_sc257")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.720645
+frame_progress = 0.474189
+
+[node name="Camera2D" type="Camera2D" parent="."]
