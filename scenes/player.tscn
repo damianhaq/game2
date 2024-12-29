@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dj15xwwo0m3e8"]
+[gd_scene load_steps=14 format=3 uid="uid://dj15xwwo0m3e8"]
 
 [ext_resource type="Texture2D" uid="uid://dgda7ifsvpfxk" path="res://assets/BigSpritev7.png" id="1_4brmk"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_e6v1f"]
+[ext_resource type="PackedScene" uid="uid://xqdpuas7qc54" path="res://scenes/sword.tscn" id="3_6ma7x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spxb5"]
 radius = 5.0
@@ -54,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ewp35")
 }],
-"loop": false,
+"loop": true,
 "name": &"idle",
 "speed": 7.0
 }, {
@@ -86,15 +87,16 @@ shape = SubResource("CapsuleShape2D_spxb5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_sc257")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.484294
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="MarkerHand1" type="Marker2D" parent="."]
-position = Vector2(5, 4)
-metadata/_edit_group_ = true
+position = Vector2(5, 3)
+
+[node name="sword" parent="MarkerHand1" instance=ExtResource("3_6ma7x")]
+rotation = 0.383972
 
 [node name="hand1" type="Sprite2D" parent="MarkerHand1"]
 texture = ExtResource("1_4brmk")
